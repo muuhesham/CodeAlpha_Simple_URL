@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin: 100px;padding-left: 300px;padding-right: 300px; background-color: rgb(0, 0, 0);">
+    <h1 style="text-align: center; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-bottom: 40px; color: rgb(255, 255, 255);">URL Shortener</h1>
+    <form action="/shorturl" method="POST" style="text-align: center; border-radius: 20px; padding-top: 100px;padding-bottom: 100px;position: relative;
+        background: rgb(209, 231, 255);
+        width: 100%;
+        box-shadow: 0px 2px 38px rgba(0, 0, 0, 0.5);
+        height: 100px;">
+        <input type="url" name="originalUrl" placeholder="  Enter The Original URL" required style="padding-top: 10px; padding-bottom: 10px; padding-left: 5px; border-radius: 10px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+        border:#000;">
+        <button type="submit" style="border-radius: 10px; margin: 10px; padding: 6px; width: 120px;
+            height: 40px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #000;
+            background-color: #a8c1e5;
+            border:#000;
+            border-radius: 30px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none; 
+            ">Shorten</button>
+        <% if (shortUrl) { %>
+            <p><b>Shortened URL: </b><a href="<%= shortUrl %> " target="_blank"> <%= shortUrl %> </a></p>
+        <% } %>
+    </form>
+</body>
+</html>
